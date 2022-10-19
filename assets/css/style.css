@@ -154,6 +154,10 @@ nav.nav-w {
 .img-col-mr-13 {
   margin-right: 13rem;
 }
+.vert-move {
+  border-radius: 10%;
+  box-shadow: inset 0px 0px 19px 5px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 100px #f0f, inset -20px 0 50px #0ff, 0 0 50px #fff, -10px 0 30px  #5600ff5e, 10px 0 30px #fe000038;
+}
 
 .has-image-centered {
   margin-left: auto;
@@ -176,6 +180,20 @@ nav.nav-w {
 
 .line-center {
   margin: 0 auto;
+}
+
+/* Preloader */
+.boxOne::after{
+  content: "+";
+  font-size: 1.8rem;
+}
+.boxTwo::after{
+  content: "+";
+  font-size: 1.8rem;
+}
+.boxThree::after{
+  content: "+";
+  font-size: 1.8rem;
 }
 
 
