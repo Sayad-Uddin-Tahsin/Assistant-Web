@@ -88,44 +88,68 @@ $('.counter').each(function() {
   });
 });
 
+document.getElementById("cp-year").innerHTML = new Date().getFullYear();
 
 // ------------------ Start ----------------------
 
-document.getElementById("cp-year").innerHTML = new Date().getFullYear();
 // conter Boxs
-let boxOne = document.getElementsByClassName("boxOne"); // 380+
-let boxTwo = document.getElementsByClassName("boxTwo"); // 85+
-let boxThree = document.getElementsByClassName("boxThree"); // 100,000+
+let boxOne = document.getElementsByClassName("boxOne"); // x
+let boxTwo = document.getElementsByClassName("boxTwo"); // y
+let boxThree = document.getElementsByClassName("boxThree"); // z
 
-// Counter function
+// conter function
 const counter = () => {
-  // First Counter
-  let count = setInterval(() => {
+  // First conter
+  const x = 380;
+  const y = 85;
+  const z = 100000;
+
+  const count = setInterval(() => {
     let i = parseInt(boxOne[0].innerText);
-    boxOne[0].innerText = (i += 5).toString();
-    if (i == 380) {
+    boxOne[0].innerText = i += 5;
+    if (i === x) {
       clearInterval(count);
     }
-  }, 21);
+  }, 10);
 
   // Second Counter
-  let countTow = setInterval(() => {
+  const countTow = setInterval(() => {
     let j = parseInt(boxTwo[0].innerText);
-    boxTwo[0].innerText = (j += 5).toString();
-    if (j == 85) {
+    boxTwo[0].innerText = j += 5;
+    if (j === y) {
       clearInterval(countTow);
     }
-  }, 59);
+  }, 10);
 
   // Thired Counter
-  let countThree = setInterval(() => {
+  const countThree = setInterval(() => {
     let k = parseInt(boxThree[0].innerText);
-    boxThree[0].innerText = (k += 500).toString();
-    if (k === 100000) {
+    boxThree[0].innerText = k += 500;
+    if (k === z) {
       clearInterval(countThree);
     }
   }, 5);
+  console.log("now it works");
 };
-counter()
 
+// counter();
 //-------------------- End ---------------------
+
+const elem = document.querySelector("#statsx");
+
+const observer = new IntersectionObserver(intersectionObserverHandler, {
+  root: null,
+  rootMargin: "170px",
+  threshold: 1.0,
+});
+
+observer.observe(elem);
+
+function intersectionObserverHandler(intersectionObserverEntries) {
+  const entry0 = intersectionObserverEntries[0];
+
+  if (entry0.target === elem && entry0.isIntersecting) {
+    counter();
+    observer.unobserve(elem);
+  }
+}
