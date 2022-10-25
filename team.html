@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Assistant - Privacy Policy</title>
+  <title>Assistant - Terms of Services</title>
   <meta property="og:title" content="Assistant Discord Bot">
   <meta name="twitter:title" content="Assistant Discord Bot">
-
-  <meta name="description" content="A powerful Multifunctional Discord Bot">
-  <meta property="og:description" content="A powerful Multifunctional Discord Bot">
-  <meta name="twitter:description" content="A powerful Multifunctional Discord Bot">
+  <meta name="description" content="Terms of Services">
+  <meta property="og:description" content="Terms of Services">
+  <meta name="twitter:description" content="Terms of Services">
 
   <meta property="og:image"
     content="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
@@ -29,47 +28,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="assets/js/jquery-3.6.0.js"></script>
-  <script>
-    function webhook() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1034454177654513714/mV_4i5xpRLAWGhorOZzo_Owni7fNGOefW3t4_uYFOEjwBu-q8qzpdWqWTTdK0sEc47_O");
-      // again, replace the url in the open method with yours
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var myEmbed = {
-        author: {
-          name: "Assistant Web",
-          
-        },
-        title: "New Visit",
-        description: "A new Visitor just visited our website!",
-        color: hexToDecimal("#e74d3c"),
-        fields: [
-          {
-            name: "Page Visited",
-            value: `Privacy Policy Page ([privacy-policy.html](${window.location.origin}/privacy-policy.html))`,
-            inline: false
-          }
-        ]
-      }
-
-      var params = {
-        username: "Assistant",
-        avatar_url: "https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.webp?size=1024",
-        embeds: [myEmbed]
-      }
-
-      request.send(JSON.stringify(params));
-
-      // function that converts a color HEX to a valid Discord color
-      function hexToDecimal(hex) {
-        return parseInt(hex.replace("#", ""), 16)
-      }
-    }
-  </script>
 </head>
 
-<body onload="webhook()">
+<body>
   <!-- Back To Top Start -->
   <a id="backtotop" data-tippy-content="Back To Top.">
     <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
@@ -104,18 +65,16 @@
         <a href="./" class="navbar-item is-tab">
           Home
         </a>
-
         <a href="#invite" class="navbar-item is-tab">
           Invite
         </a>
-        <a href="#privacy-and-policy" class="navbar-item is-tab">
+        <a href="#terms-of-services" class="navbar-item is-tab">
+          Terms of Services
+        </a>
+        <a href="./privacy-policy.html" class="navbar-item is-tab">
           Privacy Policy
         </a>
-        <a href="./terms-of-services.html" class="navbar-item is-tab">
-          Terms and Services
-        </a>
       </div>
-
       <div class="navbar-end">
 <!--         <a href="./teams.html" class="navbar-item is-tab">
           Team
@@ -126,10 +85,8 @@
       </div>
     </div>
     </div>
-    </div>
   </nav>
   <!-- Navbar End -->
-  
   <!-- Hero Section Start -->
   <section class="hero bg-base is-fullheight">
     <div class="hero-body">
@@ -137,11 +94,11 @@
         <div class="columns">
           <div class="column mr-6 mt-12" data-aos="fade-up">
             <p class="title has-text-white has-text-weight-bold">
-              Welcome to Assistant's <span class="blurple">Privacy Policy</span>
+              Welcome to Assistant's <span class="blurple">Terms of Services</span>
             </p>
             <p class="subtitle has-text-grey-light is-size-6 mt-3">
-              A privacy and policy for a bot is a document that explains how the bot handles commands and information
-              gathered in its operations. Let's jump into <span class='blurple'>Assistant</span>'s one!
+             Terms of Services for a bot is a document that explains the rules of the bot
+<span class='blurple'>Assistant</span>'s one!
             </p>
             <div class="buttons">
               <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
@@ -176,60 +133,217 @@
   </svg>
   <!-- Hero Waves End -->
 
-  <!-- Privacy Policy Section Start -->
-  <section id="privacy-and-policy" class="section mt-6">
-    <div class="has-text-centered">
-      <h1 style="text-decoration:underline #7689da; font-size: 44px;" class="title lined"><strong>
-          <center>Privacy Policy</center>
+  <!-- Features Section Start -->
+   <section id="team" class="section mt-6">
+    <div class="title">
+      <h1 style="text-decoration:underline #7689da; font-size: 36px;" class="title lined"><strong>
+          Assistant(Actual) Department
         </strong></h1>
+      <br>
     </div>
-<br>
-    <br>
-    <br>
-    <div>
-      <h3><span id="dca" class="subtitle has-text-weight-bold lined"><strong>Data Collected Automatically</strong></span></h3>
-      <p>This data may be collected automatically by some bots. For any bots that collect this data, it is necessary for
-        features of the bot. We don’t store the Role Info or other public information but we gather those when a Command
-        need those data such as <code>userinfo</code> Command!<br><br>If a data or datum is needed to execute command,
-        it will be cached and not stored in our database! Even, We usually don't store user information to our Database
-        and also we don't Track or Store Messaging Log to our database and for the <code>Suggestion Message</code>, the
-        <code>Report Message</code> and the <code>Feedback</code> Message we don’t store in database but a message sent
-        to it's selected channel in the Support Server with the message content!
-      </p>
+    <div class="team-profile">
+      <img src="https://cdn.discordapp.com/avatars/744072135869333544/e70e84f3f9b06bde23d9c35d9a7cb257.webp?size=1024"
+        width="200" alt="Tahsin Avatar">
 
-      <h3><span class="subtitle has-text-weight-bold lined">
-          <br><strong>Information that we store</strong></span></h3>
-      <p>Information that we store in our Database:
+      <h3 class="txt">
+        <span style="font-size:35px;">
+          <strong>Sayad Uddin Tahsin</strong>
+        </span>
         <br>
-        <li>Message ID (For <code>Form</code> command)</li>
+        <span style="font-size:18px;">
+          Tahsin#0242
+        </span>
         <br>
-        <li>Selected Channel ID (If you enable the Update Notification System or UNS)</li>
+        <span style="font-size:18px;">
+          Owner & Developer
+        </span>
         <br>
-        <li>Logging Channel ID (It is needed to execute <code><i>Administrative</i></code> Commands associated with the
-          Bot)</li>
-        <br>
-        <li>Suggestion/Report Message (For further inquiry)</li>
-        <br>
-        <li>Number from Counting Feature <b><i>[Upcoming]</i></b></li>
-      </p>
-
-      <h3><span class="subtitle has-text-weight-bold lined"><br><strong>Database Security</strong></span></h3>
-      <p>Our database is fully secured, and we usually encrypt the information we store in database. Also we think our
-        database is fully secured because we don’t use any third-party application for database.
-      </p>
-      <hr>
-      <p><i>
-          <strong>Note:</strong> Assistant and it's Developer won't ask your sensitive information such as Name,
-          Password, Date of Birth etc.
-        </i></p>
-      <hr>
-      <p>
-        Last Updated: 10 October 2022<br>By: Tahsin
-      </p>
+        <span style="font-size:18px;">
+          Connections:
+          <a href="https://discord.com/users/744072135869333544" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+            Discord
+          </a>,
+          <a href="https://github.com/Sayad-Uddin-Tahsin" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>,
+          <a href="https://facebook.com/SayadUddinTahsin" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+            Facebook
+          </a>
+        </span>
+      </h3>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <div class="title">
+      <h1 style="text-decoration:underline #7689da; font-size: 36px;" class="title lined"><strong>
+          Web Department
+        </strong></h1>
+      <br>
+    </div>
+    <div class="team-profile">
+      <img src="https://cdn.discordapp.com/avatars/744072135869333544/e70e84f3f9b06bde23d9c35d9a7cb257.webp?size=1024"
+        width="200" alt="Tahsin Avatar">
+
+      <h3 class="txt">
+        <span style="font-size:35px;">
+          <strong>Sayad Uddin Tahsin</strong>
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Tahsin#0242
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Team Leader & Editor
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Connections:
+          <a href="https://discord.com/users/744072135869333544" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+            Discord
+          </a>,
+          <a href="https://github.com/Sayad-Uddin-Tahsin" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>,
+          <a href="https://facebook.com/SayadUddinTahsin" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+            Facebook
+          </a>
+        </span>
+      </h3>
+    </div>
+
+    <hr>
+    <br>
+    <br>
+
+    <div class="team-profile">
+      <img src="https://cdn.discordapp.com/avatars/991711412458115084/a_a1a7939980b071c58481fabfb81c7732.gif?size=1024"
+        width="200" alt="Pavalion Avatar">
+
+      <h3 class="txt">
+        <span style="font-size:35px;">
+          <strong>Atiksh Sharma</strong>
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Pavalion_25#0001
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Senior Web Developer
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Connections:
+          <a href="https://discord.com/users/991711412458115084" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+            Discord
+          </a>,
+          <a href="https://github.com/LucasCodes1124" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>,
+          <a href="https://www.instagram.com/lucas_codes_26/
+" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>,
+          <a href="https://twitter.com/Edgetechgamer
+" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+            Twitter
+          </a>,
+          <a href="https://open.spotify.com/user/31l2qg2nwzva777bidig23chp6yu" target="_blank">
+            <i class="fa-brands fa-spotify"></i>
+            Spotify
+          </a>
+        </span>
+      </h3>
+    </div>
+
+    <hr>
+    <br>
+    <br>
+
+    <div class="team-profile">
+      <img src="https://cdn.discordapp.com/avatars/925246550018519040/0760281af7b3bcc68e34bf93794d2a05.webp?size=1024"
+        width="200" alt="SRV Avatar">
+
+      <h3 class="txt">
+        <span style="font-size:35px;">
+          <strong>-----</strong>
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          ! SяνKιℓℓєя✨🥀#0009
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Web Developer
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Connections:
+          <a href="https://discord.com/users/925246550018519040" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+            Discord
+          </a>,
+          <a href="https://github.com/SRV-KILLER09" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>,
+          <a href="https://open.spotify.com/user/mlvygh7q0e2klb5e6hjl8gkcp" target="_blank">
+            <i class="fa-brands fa-spotify"></i>
+            Spotify
+          </a>
+        </span>
+      </h3>
+    </div>
+
+    <hr>
+    <br>
+    <br>
+
+    <div class="team-profile">
+      <img src="https://cdn.discordapp.com/avatars/338420850745147413/4ceeeb9404055905c1fd6c560a6dd8eb.webp?size=1024"
+        width="200" alt="SHGAWA Avatar">
+
+      <h3 class="txt">
+        <span style="font-size:35px;">
+          <strong>-----</strong>
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          SHGAWA#2584
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Web Developer
+        </span>
+        <br>
+        <span style="font-size:18px;">
+          Connections:
+          <a href="https://discord.com/users/338420850745147413" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+            Discord
+          </a>,
+          <a href="https://github.com/shgawa13" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+        </span>
+      </h3>
+    </div>
   </section>
-  <!-- Privacy Policy Section End -->
+  <!-- Features Section End -->
 
   <!-- Invite Section Start -->
   <section id="invite" class="section mt-6">
@@ -244,13 +358,12 @@
           <small>
             <p class="is-uppercase">By Pressing the Button you are agreeing our
               <a href="./privacy-policy.html" class="blurple has-text-weight-bold">Privacy Policy</a> & <a
-                href="./terms-of-services.html" class="blurple has-text-weight-bold">Terms of Services</a>
+                href="./terms-conditions.html" class="blurple has-text-weight-bold">Terms of Services</a>
           </small>
         </p>
         <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
           class="button is-blurple is-medium"><strong><i class="fa-brands fa-discord"></i>
-            Invite Assistant</strong>
-        </a>
+            Invite Assistant</strong></a>
 
       </div>
 
@@ -278,7 +391,7 @@
 
       <p style="letter-spacing: 0.1em;" class="is-uppercase">Our
         <a href="./privacy-policy.html" class="blurple has-text-weight-bold">Privacy Policy</a> & <a
-          href="./terms-conditions.html" class="blurple has-text-weight-bold">Terms of Services</a>
+          href="./terms-of-services.html" class="blurple has-text-weight-bold">Terms of Services</a>
       </p>
     </div>
   </footer>

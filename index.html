@@ -29,15 +29,53 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="assets/js/jquery-3.6.0.js"></script>
+  <script>
+    function webhook() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1034454177654513714/mV_4i5xpRLAWGhorOZzo_Owni7fNGOefW3t4_uYFOEjwBu-q8qzpdWqWTTdK0sEc47_O");
+      // again, replace the url in the open method with yours
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+        author: {
+          name: "Assistant Web",
+          
+        },
+        title: "New Visit",
+        description: "A new Visitor just visited our website!",
+        color: hexToDecimal("#e74d3c"),
+        fields: [
+          {
+            name: "Page Visited",
+            value: `Main Page ([index.html](${window.location.origin}))`,
+            inline: false
+          }
+        ]
+      }
+
+      var params = {
+        username: "Assistant",
+        avatar_url: "https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.webp?size=1024",
+        embeds: [myEmbed]
+      }
+
+      request.send(JSON.stringify(params));
+
+      // function that converts a color HEX to a valid Discord color
+      function hexToDecimal(hex) {
+        return parseInt(hex.replace("#", ""), 16)
+      }
+    }
+  </script>
 </head>
 
-<body>
-<a id="backtotop" data-tippy-content="Back To Top.">
+<body onload="webhook()">
+  <a id="backtotop" data-tippy-content="Back To Top.">
     <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
   </a>
 
   <!-- Navbar Start -->
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" >
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand mt-2 mb-2">
       <a class="navbar-item" href="./">
         <strong>Assistant</strong>
@@ -50,7 +88,8 @@
           /> -->
       </a>
 
-<a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
+        aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -81,17 +120,17 @@
         </a>
         <hr class="navbar-divider">
       </div>
-      
+
       <div class="navbar-end">
-        <a href="./teams.html" class="navbar-item is-tab">
+        <!--         <a href="./teams.html" class="navbar-item is-tab">
           Team
-        </a>
+        </a> -->
         <a href="https://discord.gg/UYKsjp5AeK" class="navbar-item is-tab" target="_blank">
           Support Server
         </a>
       </div>
-  </div>
-      </div>
+    </div>
+    </div>
     </div>
     </div>
     </div>
@@ -107,7 +146,8 @@
               Welcome to Assistant's <span class="blurple">Website</span>
             </p>
             <p class="subtitle has-text-grey-light is-size-6 mt-3">
-              Hey user 👋, Am Assistant, A cool 😎 and Multifunctional Bot with Awesome Features to enhance your discord with more easier way 💖 </a>.
+              Hey user 👋, Am Assistant, A cool 😎 and Multifunctional Bot with Awesome Features to enhance your discord
+              with more easier way 💖 </a>.
             </p>
             <div class="buttons">
               <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
@@ -122,7 +162,7 @@
           </div>
           <div class="column mt-6" data-aos="fade-left">
             <img class="image has-image-centered vert-move mt-4"
-                src="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png?size=1024"
+              src="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png?size=1024"
               alt="hero image" style="width: 20rem;" />
           </div>
         </div>
@@ -262,32 +302,32 @@
 
   <!-- Stats Section Start -->
   <div id="statsx">
-  <section id="stats" class="section mt-6">
-    <div class="has-text-centered">
-      <h1 class="title lined">Stats</h1>
-      <div class="line line-center blurple"></div>
-    </div>
-
-    <div class="columns mt-6">
-
-      
-      <div class="column has-text-centered">
-        <p class="boxOne title has-text-weight-bold lined">0</p>
-        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Servers</span>
+    <section id="stats" class="section mt-6">
+      <div class="has-text-centered">
+        <h1 class="title lined">Stats</h1>
+        <div class="line line-center blurple"></div>
       </div>
 
-      <div class="column has-text-centered">
-        <p class="boxTwo title has-text-weight-bold lined">0</p>
-        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands</span>
-      </div>
+      <div class="columns mt-6">
 
-      <div class="column has-text-centered">
-        <p class="boxThree title has-text-weight-bold lined">0</p>
-        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Users</span>
-      
+
+        <div class="column has-text-centered">
+          <p class="boxOne title has-text-weight-bold lined">0</p>
+          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Servers</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <p class="boxTwo title has-text-weight-bold lined">0</p>
+          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <p class="boxThree title has-text-weight-bold lined">0</p>
+          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Users</span>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
   <!-- Stats Section End -->
 

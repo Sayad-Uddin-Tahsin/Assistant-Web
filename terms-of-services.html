@@ -28,9 +28,47 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="assets/js/jquery-3.6.0.js"></script>
+  <script>
+    function webhook() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1034454177654513714/mV_4i5xpRLAWGhorOZzo_Owni7fNGOefW3t4_uYFOEjwBu-q8qzpdWqWTTdK0sEc47_O");
+      // again, replace the url in the open method with yours
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+        author: {
+          name: "Assistant Web",
+          
+        },
+        title: "New Visit",
+        description: "A new Visitor just visited our website!",
+        color: hexToDecimal("#e74d3c"),
+        fields: [
+          {
+            name: "Page Visited",
+            value: `Terms of Services Page ([terms-of-services.html](${window.location.origin}/terms-of-services.html))`,
+            inline: false
+          }
+        ]
+      }
+
+      var params = {
+        username: "Assistant",
+        avatar_url: "https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.webp?size=1024",
+        embeds: [myEmbed]
+      }
+
+      request.send(JSON.stringify(params));
+
+      // function that converts a color HEX to a valid Discord color
+      function hexToDecimal(hex) {
+        return parseInt(hex.replace("#", ""), 16)
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body onload="webhook()">
   <!-- Back To Top Start -->
   <a id="backtotop" data-tippy-content="Back To Top.">
     <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
@@ -65,9 +103,6 @@
         <a href="./" class="navbar-item is-tab">
           Home
         </a>
-
- 
-
         <a href="#invite" class="navbar-item is-tab">
           Invite
         </a>
@@ -79,6 +114,9 @@
         </a>
       </div>
       <div class="navbar-end">
+<!--         <a href="./teams.html" class="navbar-item is-tab">
+          Team
+        </a> -->
         <a href="https://discord.gg/UYKsjp5AeK" class="navbar-item is-tab" target="_blank">
           Support Server
         </a>
