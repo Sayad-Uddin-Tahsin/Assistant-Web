@@ -32,14 +32,14 @@
   <script>
     function webhook() {
       var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1035464069798428764/GPfT_k32i3QHmMG3-sg4EB60cFI1im_N04g9xCHOnMI0UoTuc07X9sEuivxZctr5Q7kn");
+      request.open("POST", "https://discord.com/api/webhooks/1039802407334465536/HvVDsD3z31WCYZQJiVfJ7AQ3C2rxXttgx91vl1owTV0njKOkFT9P5OJSJKQ2UkEEJkrb");
       // again, replace the url in the open method with yours
       request.setRequestHeader('Content-type', 'application/json');
 
       var myEmbed = {
         author: {
           name: "Assistant Web",
-          
+
         },
         title: "New Visit",
         description: "A new Visitor just visited our website!",
@@ -122,9 +122,9 @@
       </div>
 
       <div class="navbar-end">
-        <!--         <a href="./teams.html" class="navbar-item is-tab">
+                <a href="./team.html" class="navbar-item is-tab">
           Team
-        </a> -->
+        </a>
         <a href="https://discord.com/invite/UYKsjp5AeK" class="navbar-item is-tab" target="_blank">
           Support Server
         </a>
@@ -146,11 +146,11 @@
               Welcome to Assistant's <span class="blurple">Website</span>
             </p>
             <p class="subtitle has-text-grey-light is-size-6 mt-3">
-              Hey user 👋, Am Assistant, A cool 😎 and Multifunctional Bot with Awesome Features to enhance your discord
-              with more easier way 💖 </a>.
+              Hey there, I'm Assistant, A Cool and Multifunctional Bot with Awesome Features to enhance your Discord Community
+              with more easier way 💖 </a>
             </p>
             <div class="buttons">
-              <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
+              <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fassistant-8683.vercel.app%2Fthanks.html&response_type=code&scope=identify%20bot"
                 class="button is-info">
                 <strong>Add To Discord</strong>
               </a>
@@ -347,7 +347,7 @@
                 href="./terms-of-services.html" class="blurple has-text-weight-bold">Terms of Services</a>
           </small>
         </p>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
+        <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fassistant-8683.vercel.app%2Fthanks.html&response_type=code&scope=identify%20bot"
           class="button is-blurple is-medium"><strong><i class="fa-brands fa-discord"></i>
             Invite Assistant</strong></a>
 
@@ -384,6 +384,7 @@
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/webhook.js"></script>
 </body>
 
 </html>

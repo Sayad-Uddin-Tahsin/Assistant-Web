@@ -4,21 +4,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Assistant - Terms of Services</title>
-  <meta property="og:title" content="Assistant Discord Bot">
-  <meta name="twitter:title" content="Assistant Discord Bot">
-  <meta name="description" content="Terms of Services">
-  <meta property="og:description" content="Terms of Services">
-  <meta name="twitter:description" content="Terms of Services">
+  <title>Assistant - Development Team</title>
+  <meta property="og:title" content="Assistant Development Team">
+  <meta name="twitter:title" content="Assistant Development Team">
+  <meta name="description" content="Let's meet with the Cool People of Assistant Development Team">
+  <meta property="og:description" content="Let's meet with the Cool People of Assistant Development Team">
+  <meta name="twitter:description" content="Let's meet with the Cool People of Assistant Development Team">
 
   <meta property="og:image"
-    content="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
+    content="https://cdn.discordapp.com/attachments/923117576832290826/1033720475177734144/ADT.jpg">
   <meta name="twitter:image"
-    content="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
+    content="https://cdn.discordapp.com/attachments/923117576832290826/1033720475177734144/ADT.jpg">
 
 
   <link rel="icon" type="image/x-icon"
-    href="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
+    href="https://cdn.discordapp.com/attachments/923117576832290826/1033720475177734144/ADT.jpg">
   <link rel="stylesheet" href="assets/css/bulma.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -28,9 +28,47 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="assets/js/jquery-3.6.0.js"></script>
+  <script>
+    function webhook() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1039802407334465536/HvVDsD3z31WCYZQJiVfJ7AQ3C2rxXttgx91vl1owTV0njKOkFT9P5OJSJKQ2UkEEJkrb");
+      // again, replace the url in the open method with yours
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+        author: {
+          name: "Assistant Web",
+
+        },
+        title: "New Visit",
+        description: "A new Visitor just visited our website!",
+        color: hexToDecimal("#e74d3c"),
+        fields: [
+          {
+            name: "Page Visited",
+            value: `Team Page ([team.html](${window.location.origin}/team.html))`,
+            inline: false
+          }
+        ]
+      }
+
+      var params = {
+        username: "Assistant",
+        avatar_url: "https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.webp?size=1024",
+        embeds: [myEmbed]
+      }
+
+      request.send(JSON.stringify(params));
+
+      // function that converts a color HEX to a valid Discord color
+      function hexToDecimal(hex) {
+        return parseInt(hex.replace("#", ""), 16)
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body onload="webhook()">
   <!-- Back To Top Start -->
   <a id="backtotop" data-tippy-content="Back To Top.">
     <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
@@ -40,8 +78,7 @@
   <!-- Navbar Start -->
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand mt-2 mb-2">
-      <a class="navbar-item"
-        href="./">
+      <a class="navbar-item" href="./">
         <strong>Assistant</strong>
 
         <!-- or if you want to use image -->
@@ -65,20 +102,14 @@
         <a href="./" class="navbar-item is-tab">
           Home
         </a>
+        <a href="#team" class="navbar-item is-tab">
+          Team
+        </a>
         <a href="#invite" class="navbar-item is-tab">
           Invite
         </a>
-        <a href="#terms-of-services" class="navbar-item is-tab">
-          Terms of Services
-        </a>
-        <a href="./privacy-policy.html" class="navbar-item is-tab">
-          Privacy Policy
-        </a>
       </div>
       <div class="navbar-end">
-<!--         <a href="./teams.html" class="navbar-item is-tab">
-          Team
-        </a> -->
         <a href="https://discord.gg/UYKsjp5AeK" class="navbar-item is-tab" target="_blank">
           Support Server
         </a>
@@ -94,14 +125,15 @@
         <div class="columns">
           <div class="column mr-6 mt-12" data-aos="fade-up">
             <p class="title has-text-white has-text-weight-bold">
-              Welcome to Assistant's <span class="blurple">Terms of Services</span>
+              Let's meet with our <span class="blurple">Development Team</span>
             </p>
             <p class="subtitle has-text-grey-light is-size-6 mt-3">
-             Terms of Services for a bot is a document that explains the rules of the bot
-<span class='blurple'>Assistant</span>'s one!
+              Assistant has a Cool Team with 2 separated departments that makes it's Bot and Web both side awesome!
+              Let's meet with the
+              <span class='blurple'>Cool People!</span>
             </p>
             <div class="buttons">
-              <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
+              <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fassistant-8683.vercel.app%2Fthanks.html&response_type=code&scope=identify%20bot"
                 class="button is-info">
                 <strong>Add To Discord</strong>
               </a>
@@ -113,14 +145,14 @@
           </div>
           <div class="column mt-6" data-aos="fade-left">
             <img class="image has-image-centered vert-move mt-4"
-              src="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png?size=1024"
+              src="https://cdn.discordapp.com/attachments/923117576832290826/1033720475177734144/ADT.jpg"
               alt="hero image" style="width: 20rem;" />
           </div>
         </div>
       </div>
     </div>
     <div class="has-text-centered" data-tippy-content="Scroll Down">
-      <a href="#privacy-and-policy"><i class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"></i></a>
+      <a href="#team"><i class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"></i></a>
     </div>
   </section>
   <!-- Hero Section End -->
@@ -134,7 +166,7 @@
   <!-- Hero Waves End -->
 
   <!-- Features Section Start -->
-   <section id="team" class="section mt-6">
+  <section id="team" class="section mt-6">
     <div class="title">
       <h1 style="text-decoration:underline #7689da; font-size: 36px;" class="title lined"><strong>
           Assistant(Actual) Department
@@ -225,7 +257,7 @@
     <br>
 
     <div class="team-profile">
-      <img src="https://cdn.discordapp.com/avatars/991711412458115084/a_a1a7939980b071c58481fabfb81c7732.gif?size=1024"
+      <img src="https://cdn.discordapp.com/avatars/991711412458115084/6a88f210d25407f34c45a7bd88306377.webp?size=1024"
         width="200" alt="Pavalion Avatar">
 
       <h3 class="txt">
@@ -274,7 +306,7 @@
     <br>
 
     <div class="team-profile">
-      <img src="https://cdn.discordapp.com/avatars/925246550018519040/0760281af7b3bcc68e34bf93794d2a05.webp?size=1024"
+      <img src="https://cdn.discordapp.com/avatars/925246550018519040/d372e22fe0c44810597cff7b7666ccba.webp?size=1024"
         width="200" alt="SRV Avatar">
 
       <h3 class="txt">
@@ -358,10 +390,10 @@
           <small>
             <p class="is-uppercase">By Pressing the Button you are agreeing our
               <a href="./privacy-policy.html" class="blurple has-text-weight-bold">Privacy Policy</a> & <a
-                href="./terms-conditions.html" class="blurple has-text-weight-bold">Terms of Services</a>
+                href="./terms-of-services.html" class="blurple has-text-weight-bold">Terms of Services</a>
           </small>
         </p>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FUYKsjp5AeK&response_type=code&scope=identify%20bot%20applications.commands"
+        <a href="https://discord.com/api/oauth2/authorize?client_id=821445736322695179&permissions=8&redirect_uri=https%3A%2F%2Fassistant-8683.vercel.app%2Fthanks.html&response_type=code&scope=identify%20bot"
           class="button is-blurple is-medium"><strong><i class="fa-brands fa-discord"></i>
             Invite Assistant</strong></a>
 
@@ -383,15 +415,14 @@
 
       </div>
 
+      <p style="letter-spacing: 0.1em;" class="is-uppercase">Our
+        <a href="./privacy-policy.html" class="blurple has-text-weight-bold">Privacy Policy</a> & <a
+          href="./terms-of-services.html" class="blurple has-text-weight-bold">Development Team</a>
       <p>
 
         © 2021 - <span id="cp-year"></span> Copyright Assistant Development.<br>All Rights
         Reserved.
       </p>
-
-      <p style="letter-spacing: 0.1em;" class="is-uppercase">Our
-        <a href="./privacy-policy.html" class="blurple has-text-weight-bold">Privacy Policy</a> & <a
-          href="./terms-of-services.html" class="blurple has-text-weight-bold">Terms of Services</a>
       </p>
     </div>
   </footer>

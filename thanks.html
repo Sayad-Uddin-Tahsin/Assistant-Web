@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanks for Inviting Assistant!</title>
+  <meta property="og:title" content="Thanks for Inviting Assistant!">
+  <meta name="twitter:title" content="Thanks for Inviting Assistant!">
+  <meta name="description" content="After 5 seconds you'll be redirected to Assistant Support Server">
+  <meta property="og:description" content="After 5 seconds you'll be redirected to Assistant Support Server">
+  <meta name="twitter:description" content="After 5 seconds you'll be redirected to Assistant Support Server">
+
+  <meta property="og:image"
+    content="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
+  <meta name="twitter:image"
+    content="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
+
+
+  <link rel="icon" type="image/x-icon"
+    href="https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.png">
+  <link rel="stylesheet" href="assets/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="assets/js/jquery-3.6.0.js"></script>
+  <script>
+    function webhook() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1039802407334465536/HvVDsD3z31WCYZQJiVfJ7AQ3C2rxXttgx91vl1owTV0njKOkFT9P5OJSJKQ2UkEEJkrb");
+      // again, replace the url in the open method with yours
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var myEmbed = {
+        author: {
+          name: "Assistant Web",
+
+        },
+        title: "New Visit",
+        description: "A new Visitor just visited our website!",
+        color: hexToDecimal("#e74d3c"),
+        fields: [
+          {
+            name: "Page Visited",
+            value: `Thanks for Inviting Page ([thanks.html](${window.location.origin}/thanks.html))`,
+            inline: false
+          }
+        ]
+      }
+
+      var params = {
+        username: "Assistant",
+        avatar_url: "https://cdn.discordapp.com/avatars/821445736322695179/8b62eb7c1a4feeced2c0a24ce78cc671.webp?size=1024",
+        embeds: [myEmbed]
+      }
+
+      request.send(JSON.stringify(params));
+
+      // function that converts a color HEX to a valid Discord color
+      function hexToDecimal(hex) {
+        return parseInt(hex.replace("#", ""), 16)
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    var count = 6;
+    var url = "https://discord.com/invite/UYKsjp5AeK";
+
+    function countDown() {
+      var timer = document.getElementById("timer");
+      if (count > 1) {
+        count--;
+        timer.innerHTML = "Redirecting in " + count + "...";
+        setTimeout("countDown()", 1000);
+      } else {
+        timer.innerHTML = "Redirecting...";
+        var newWin = window.open(url, '_blank', '');
+        // window.location.href = window.location.origin;
+
+        if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
+          window.location.href = url;
+        }
+      }
+    }
+  </script>
+</head>
+
+<body onload="webhook()">
+  <!-- Back To Top Start -->
+  <a id="backtotop" data-tippy-content="Back To Top.">
+    <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+  </a>
+  <!-- Back To Top End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand mt-2 mb-2">
+      <a class="navbar-item" href="./">
+        <strong>Assistant</strong>
+
+        <!-- or if you want to use image -->
+        <!-- <img
+            src="image link or path"
+            width="112"
+            height="28"
+          /> -->
+      </a>
+
+      <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
+        aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section Start -->
+  <section class="hero bg-base is-fullheight">
+    <div class="hero-body">
+      <div class="columns">
+        <div class="column mr-6 mt-12" data-aos="fade-up">
+          <p class="title has-text-white has-text-weight-bold">
+            Thanks for Inviting <span class='blurple'>Assistant</span>!
+          </p>
+          <p class="subtitle has-text-grey-light is-size-6 mt-3">
+            We are really feeling so lucky to be a part of your community! You'll be redirected to the <span
+              class="blurple">Support Server</span> within a moment!
+          </p>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="timer" class="has-text-white" style="font-size: 16px">
+            <script type="text/javascript">
+              countDown();
+            </script>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
