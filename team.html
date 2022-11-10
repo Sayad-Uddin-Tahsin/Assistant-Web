@@ -28,6 +28,18 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="assets/js/jquery-3.6.0.js"></script>
+  <style>
+    button {
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      outline: none;
+      position: absolute;
+      left: 5px;
+    }
+  </style>
   <script>
     function webhook() {
       var request = new XMLHttpRequest();
@@ -66,6 +78,16 @@
       }
     }
   </script>
+  <script>
+    function copyLink(copyText) {
+      var copyText = `${window.location.origin}/team.html${copyText}`
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText);
+      window.location.href = copyText;
+    }
+  </script>
+
 </head>
 
 <body onload="webhook()">
@@ -173,13 +195,14 @@
         </strong></h1>
       <br>
     </div>
-    <div class="team-profile">
+    <div class="team-profile" id='tahsin-bdpt'>
       <img src="https://cdn.discordapp.com/avatars/744072135869333544/e70e84f3f9b06bde23d9c35d9a7cb257.webp?size=1024"
         width="200" alt="Tahsin Avatar">
 
-      <h3 class="txt">
+      <h3>
         <span style="font-size:35px;">
           <strong>Sayad Uddin Tahsin</strong>
+          <button onclick="copyLink('#tahsin-bdpt')"><i class="fa fa-link"></i></button>
         </span>
         <br>
         <span style="font-size:18px;">
@@ -217,13 +240,14 @@
         </strong></h1>
       <br>
     </div>
-    <div class="team-profile">
+    <div class="team-profile" id="tahsin-wdpt">
       <img src="https://cdn.discordapp.com/avatars/744072135869333544/e70e84f3f9b06bde23d9c35d9a7cb257.webp?size=1024"
         width="200" alt="Tahsin Avatar">
 
-      <h3 class="txt">
+      <h3>
         <span style="font-size:35px;">
           <strong>Sayad Uddin Tahsin</strong>
+          <button onclick="copyLink('#tahsin-wdpt')"><i class="fa fa-link"></i></button>
         </span>
         <br>
         <span style="font-size:18px;">
@@ -256,13 +280,14 @@
     <br>
     <br>
 
-    <div class="team-profile">
+    <div class="team-profile" id="pavalion-wdpt">
       <img src="https://cdn.discordapp.com/avatars/991711412458115084/6a88f210d25407f34c45a7bd88306377.webp?size=1024"
         width="200" alt="Pavalion Avatar">
 
-      <h3 class="txt">
+      <h3>
         <span style="font-size:35px;">
           <strong>Atiksh Sharma</strong>
+          <button onclick="copyLink('#pavalion-wdpt')"><i class="fa fa-link"></i></button>
         </span>
         <br>
         <span style="font-size:18px;">
@@ -305,13 +330,14 @@
     <br>
     <br>
 
-    <div class="team-profile">
+    <div class="team-profile" id="srv-wdpt">
       <img src="https://cdn.discordapp.com/avatars/925246550018519040/d372e22fe0c44810597cff7b7666ccba.webp?size=1024"
         width="200" alt="SRV Avatar">
 
-      <h3 class="txt">
+      <h3>
         <span style="font-size:35px;">
           <strong>-----</strong>
+          <button onclick="copyLink('#srv-wdpt')"><i class="fa fa-link"></i></button>
         </span>
         <br>
         <span style="font-size:18px;">
@@ -344,13 +370,14 @@
     <br>
     <br>
 
-    <div class="team-profile">
+    <div class="team-profile" id=shgawa-wdpt>
       <img src="https://cdn.discordapp.com/avatars/338420850745147413/4ceeeb9404055905c1fd6c560a6dd8eb.webp?size=1024"
         width="200" alt="SHGAWA Avatar">
 
-      <h3 class="txt">
+      <h3>
         <span style="font-size:35px;">
           <strong>-----</strong>
+          <button onclick="copyLink('#shgawa-wdpt')"><i class="fa fa-link"></i></button>
         </span>
         <br>
         <span style="font-size:18px;">
