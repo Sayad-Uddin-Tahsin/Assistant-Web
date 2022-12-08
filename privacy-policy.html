@@ -70,6 +70,15 @@
 </head>
 
 <body onload="webhook()">
+  <style type="text/css">
+    .roman {
+    list-style-type: lower-roman;
+    }
+    .square {
+      list-style-type: square;
+      margin-left: -2em;
+    }
+  </style>
   <!-- Back To Top Start -->
   <a id="backtotop" data-tippy-content="Back To Top.">
     <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
@@ -203,14 +212,15 @@
         <br>
         <li>Message ID (For <code>Form</code> command)</li>
         <br>
-        <li>Selected Channel ID (If you enable the Update Notification System or UNS)</li>
-        <br>
+        <li>Selected Channel ID</li>
+      <ul class="square">
         <li>Logging Channel ID (It is needed to execute <code><i>Administrative</i></code> Commands associated with the
           Bot)</li>
+        <li>Channel ID (If Enabled the <code>Update Notification System</code>)</li>
+        <li>Number From Couting Game</li>
+      </ul>
         <br>
         <li>Suggestion/Report Message (For further inquiry)</li>
-        <br>
-        <li>Number from Counting Feature <b><i>[Upcoming]</i></b></li>
       </p>
 
       <h3><span class="subtitle has-text-weight-bold lined"><br><strong>Database Security</strong></span></h3>
