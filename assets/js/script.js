@@ -100,8 +100,8 @@ let boxThree = document.getElementsByClassName("boxThree"); // z
 // conter function
 const counter = () => {
   // First conter
-  const x = 380;
-  const y = 85;
+  const x = 400;
+  const y = 90;
   const z = 100000;
 
   const count = setInterval(() => {
